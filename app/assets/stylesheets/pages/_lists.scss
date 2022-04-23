@@ -1,0 +1,28 @@
+// Place all the styles related to the lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#lists .banner {
+  // background-image: url("https://picsum.photos/1600/300?grayscale");
+  background-color: rgba(178, 178, 199, 0.835);
+  height: 300px;
+  // background-color: lightblue;
+  h2 {
+    color: rgb(248, 247, 182);
+    text-align: center;
+    margin-top: 140px;
+
+  }
+}
+
+#lists .card-image {
+  background-image: url("https://picsum.photos/400/200?grayscale");
+  // background-color:  rgb(201, 250, 229);
+  height: 200px;
+}
+
+#lists h5 {
+  text-align: center;
+  padding-top: 100px;
+  color: yellow;
+}
