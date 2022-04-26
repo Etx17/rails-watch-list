@@ -7,10 +7,11 @@
 
   <div class="bookmarks-cards-container row col-lg-12">
     <% @list.bookmarks.each do |bookmark| %>
-      <div class="bookmark-card col-lg-4 shadow mb-5 bg-white rounded">
+      <div class="bookmark-card col-lg-4 col-md-6 col-sm-6 shadow mb-5 bg-white rounded">
 
         <div class="bookmark-card-image ">
-
+          <%= image_tag bookmark.movie.poster_url,
+           alt: "poster of movie", height: 200   %>
         </div>
 
         <div class="bookmark-card-content d-flex flex-column p-3">
@@ -20,7 +21,9 @@
               <span> - <%= bookmark.movie.rating %> <i class="material-icons">star_border</i></span>
             </h5>
 
-            <p><%= bookmark.movie.overview %></p>
+            <div class="bookmark-card-content-overview overflow-auto border-bottom">
+              <p><%= bookmark.movie.overview %></p>
+            </div>
 
             <div class="d-flex flex-row justify-content-between">
 
@@ -32,7 +35,8 @@
               <%= link_to "Delete",
                     bookmark_path(bookmark),
                     method: :delete,
-                    data: { confirm: "Are you sure?" } %>
+                    data: { confirm: "Are you sure?" },
+                    class: "text-danger" %>
             </div>
 
 
