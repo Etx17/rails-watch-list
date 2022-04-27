@@ -5,17 +5,12 @@
 
   <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-success"  %>
 
-  <div class="bookmarks-cards-container row col-lg-12">
+  <div class="bookmarks-cards-container d-flex flex-row  col-lg-12">
     <% @list.bookmarks.each do |bookmark| %>
-      <div class="bookmark-card col-lg-4 col-md-6 col-sm-6 shadow mb-5 bg-white rounded">
-
-        <div class="bookmark-card-image ">
-          <%= image_tag bookmark.movie.poster_url,
-           alt: "poster of movie", height: 200   %>
-        </div>
-
-        <div class="bookmark-card-content d-flex flex-column p-3">
-
+      <div class="col-lg-4 col-md-6 col-sm-6 p-2">
+        <div class="bookmark-card  shadow mb-5 bg-white rounded">
+          <%= image_tag bookmark.movie.poster_url, height: 500 %>
+          <div class="bookmark-card-content d-flex flex-column p-3">
             <h5>
               <strong><%= bookmark.movie.title %></strong>
               <span> - <%= bookmark.movie.rating %> <i class="material-icons">star_border</i></span>
@@ -38,8 +33,7 @@
                     data: { confirm: "Are you sure?" },
                     class: "text-danger" %>
             </div>
-
-
+          </div>
         </div>
       </div>
     <% end %>

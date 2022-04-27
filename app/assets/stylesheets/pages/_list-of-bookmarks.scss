@@ -1,19 +1,20 @@
 #list-of-bookmarks .banner {
   height: 300px;
-  // background-image: url("https://picsum.photos/1600/300?grayscale");
-  background-color: rgba(178, 178, 199, 0.835);
+  background-image: url("https://picsum.photos/1600/300?grayscale");
+  // background-color: rgba(178, 178, 199, 0.835);
 }
 
 #list-of-bookmarks .bookmark-card {
-  padding: 10px
+  // padding: 10px
 }
 
 
-#list-of-bookmarks .bookmark-card-image {
-   // background-image: url("https://picsum.photos/400/200?grayscale");
-   background-color:  rgb(201, 250, 229);
-   height: 200px;
-   width: 100%;
+#list-of-bookmarks .bookmark-card img {
+
+  width: 100%;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center
 }
 
 #list-of-bookmarks .bookmark-card-content-overview {
